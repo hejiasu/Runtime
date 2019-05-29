@@ -7,7 +7,8 @@
 //
 
 #import "NSURL+ExchangeMethod.h"
-#import <objc/objc-runtime.h>
+#import <objc/runtime.h>
+
 @implementation NSURL (ExchangeMethod)
 
 //当这个类被加载时调用
@@ -24,7 +25,7 @@
     method_exchangeImplementations(urlWithStr,XYURLWithStr);
 }
 
-//不能在分类中重写系统方法imageNamed，因为会把系统的功能给覆盖掉，而且分类中不能调用super.
+//不能在分类中重写系统方法URLWithString，因为会把系统的功能给覆盖掉，而且分类中不能调用super.
 
 
 +(instancetype)XYURLWithStr:(NSString*)str{

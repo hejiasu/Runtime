@@ -1,14 +1,19 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -16,7 +21,89 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kH6-12-LgT">
+                                <rect key="frame" x="46" y="90" width="92" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="rwK-yJ-hXN"/>
+                                </constraints>
+                                <state key="normal" title="添加实例方法"/>
+                                <connections>
+                                    <action selector="addMethod_obj:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kHN-pW-T48"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yhu-dS-fEN">
+                                <rect key="frame" x="46" y="150" width="77" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="jhH-5s-94r"/>
+                                </constraints>
+                                <state key="normal" title="添加类方法"/>
+                                <connections>
+                                    <action selector="addMethod_class:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mYy-qb-l46"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="edj-w9-xBh">
+                                <rect key="frame" x="46" y="210" width="62" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="gjZ-hA-sMf"/>
+                                </constraints>
+                                <state key="normal" title="添加属性"/>
+                                <connections>
+                                    <action selector="addPro:" destination="BYZ-38-t0r" eventType="touchUpInside" id="iSu-5c-jVq"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Lm-Hx-6M0">
+                                <rect key="frame" x="46" y="270" width="62" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="0LQ-yN-wPk"/>
+                                </constraints>
+                                <state key="normal" title="消息转发"/>
+                                <connections>
+                                    <action selector="forwardInvocation:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jAY-GV-LfW"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3h0-LK-Eqs">
+                                <rect key="frame" x="46" y="390" width="31" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="bot-rF-wMV"/>
+                                </constraints>
+                                <state key="normal" title="归档"/>
+                                <connections>
+                                    <action selector="encode:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ZDb-I4-YX5"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OS7-J0-Sfz">
+                                <rect key="frame" x="46" y="330" width="62" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="BfJ-5t-dWB"/>
+                                </constraints>
+                                <state key="normal" title="方法交换"/>
+                                <connections>
+                                    <action selector="methodsExchange:" destination="BYZ-38-t0r" eventType="touchUpInside" id="aNt-x2-4JS"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" relation="greaterThanOrEqual" secondItem="3h0-LK-Eqs" secondAttribute="trailing" id="5fz-UY-5fI"/>
+                            <constraint firstItem="9Lm-Hx-6M0" firstAttribute="top" secondItem="edj-w9-xBh" secondAttribute="bottom" constant="30" id="GLs-ti-Ici"/>
+                            <constraint firstItem="OS7-J0-Sfz" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="30" id="H4D-MA-lJ1"/>
+                            <constraint firstItem="Yhu-dS-fEN" firstAttribute="top" secondItem="kH6-12-LgT" secondAttribute="bottom" constant="30" id="KZR-9R-CMH"/>
+                            <constraint firstItem="edj-w9-xBh" firstAttribute="top" secondItem="Yhu-dS-fEN" secondAttribute="bottom" constant="30" id="P8g-6y-Hec"/>
+                            <constraint firstItem="9Lm-Hx-6M0" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="30" id="PDa-On-mwK"/>
+                            <constraint firstAttribute="trailingMargin" relation="greaterThanOrEqual" secondItem="edj-w9-xBh" secondAttribute="trailing" id="RCA-DR-ldO"/>
+                            <constraint firstAttribute="trailingMargin" relation="greaterThanOrEqual" secondItem="kH6-12-LgT" secondAttribute="trailing" id="XtP-et-OOw"/>
+                            <constraint firstAttribute="trailingMargin" relation="greaterThanOrEqual" secondItem="9Lm-Hx-6M0" secondAttribute="trailing" id="YaA-jI-EwZ"/>
+                            <constraint firstItem="Yhu-dS-fEN" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="30" id="ZDn-h2-WTs"/>
+                            <constraint firstItem="3h0-LK-Eqs" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="30" id="f7v-Sv-K0P"/>
+                            <constraint firstItem="OS7-J0-Sfz" firstAttribute="top" secondItem="9Lm-Hx-6M0" secondAttribute="bottom" constant="30" id="hPb-nX-4RR"/>
+                            <constraint firstItem="kH6-12-LgT" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="30" id="qDY-hk-pf6"/>
+                            <constraint firstItem="kH6-12-LgT" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="70" id="sw4-rp-lCh"/>
+                            <constraint firstAttribute="trailingMargin" relation="greaterThanOrEqual" secondItem="OS7-J0-Sfz" secondAttribute="trailing" id="tmU-iZ-XQ5"/>
+                            <constraint firstItem="edj-w9-xBh" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="30" id="uOv-tZ-k4s"/>
+                            <constraint firstAttribute="trailingMargin" relation="greaterThanOrEqual" secondItem="Yhu-dS-fEN" secondAttribute="trailing" id="vVI-9X-6Me"/>
+                            <constraint firstItem="3h0-LK-Eqs" firstAttribute="top" secondItem="OS7-J0-Sfz" secondAttribute="bottom" constant="30" id="yrC-nl-vfZ"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

@@ -7,7 +7,8 @@
 //
 
 #import "NSString+AddProperty.h"
-#import <objc/objc-runtime.h>
+#import <objc/runtime.h>
+
 // 定义关联的key
 static const char *key = "name";
 @implementation NSString (AddProperty)
